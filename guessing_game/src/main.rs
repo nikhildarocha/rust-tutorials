@@ -2,6 +2,7 @@
 extern crate rand; //ets Rust know we’ll be using that external dependency
 
 use std::io;
+use std::cmp::Ordering;
 use rand::Rng; //Rng is a trait that defines methods that random number generators implement, and this trait must be in scope for us to use those methods
 
 
@@ -24,6 +25,16 @@ fn main() {
 
 
 
+    let guess: u32 = guess.trim().parse()
+        .expect("Please type a number!");
     println!("You guessed: {}", guess);
 
+    match guess.cmp(&secret_number){
+    	Ordering::Less    => println!("Too small!"),
+    	Ordering::Greater => println!("Too big!"),
+    	Ordering::Equal   => println!("You win!"),
+
+
+    }
+    
 }
