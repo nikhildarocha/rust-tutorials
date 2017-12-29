@@ -1,8 +1,8 @@
 
-extern crate rand;
+extern crate rand; //ets Rust know we’ll be using that external dependency
 
 use std::io;
-use rand::Rng;
+use rand::Rng; //Rng is a trait that defines methods that random number generators implement, and this trait must be in scope for us to use those methods
 
 
 fn main() {
