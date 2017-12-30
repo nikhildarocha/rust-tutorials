@@ -1,0 +1,6 @@
+[package]
+name = "variables"
+version = "0.1.0"
+authors = ["Nikhil Da Rocha <niks77883@gmail.com>"]
+
+[dependencies]
